@@ -243,7 +243,7 @@
 
   #define ADAPTIVE_FAN_SLOWING              // Slow part cooling fan if temperature drops   //SonicBoom
   #if BOTH(ADAPTIVE_FAN_SLOWING, PIDTEMP)
-  #define NO_FAN_SLOWING_IN_PID_TUNING    // Don't slow fan speed during M303             //SonicBoom
+  #define NO_FAN_SLOWING_IN_PID_TUNING    // Don't slow fan speed during M303     //SonicBoom
   #endif
 
   /**
@@ -648,7 +648,7 @@
 //
 // For Z set the number of stepper drivers
 //
-#define NUM_Z_STEPPER_DRIVERS 2   // (1-4) Z options change based on how many    //SonicBoom
+#define NUM_Z_STEPPER_DRIVERS 2   // (1-4) Z options change based on how many   //SonicBoom
 
 #if NUM_Z_STEPPER_DRIVERS > 1
   // Enable if Z motor direction signals are the opposite of Z1
@@ -1059,7 +1059,7 @@
  * vibration and surface artifacts. The algorithm adapts to provide the best possible step smoothing at the
  * lowest stepping frequencies.
  */
-#define ADAPTIVE_STEP_SMOOTHING     //Sonicboom
+#define ADAPTIVE_STEP_SMOOTHING     //SonicBoom
 
 /**
  * Custom Microstepping
@@ -1219,7 +1219,7 @@
 
 #if HAS_DISPLAY
   // The timeout (in ms) to return to the status screen from sub-menus
-  #define LCD_TIMEOUT_TO_STATUS 15000     //Sonicboom
+  #define LCD_TIMEOUT_TO_STATUS 15000     //SonicBoom
 
   #if ENABLED(SHOW_BOOTSCREEN)
     #define BOOTSCREEN_TIMEOUT 4000      // (ms) Total Duration to display the boot screen(s)
@@ -1229,23 +1229,23 @@
   #endif
 
   // Scroll a longer status message into view
-  #define STATUS_MESSAGE_SCROLLING      //Sonicboom
+  #define STATUS_MESSAGE_SCROLLING      //SonicBoom
 
   // On the Info Screen, display XY with one decimal place when possible
   //#define LCD_DECIMAL_SMALL_XY
 
   // Add an 'M73' G-code to set the current percentage
-  #define LCD_SET_PROGRESS_MANUALLY     //Sonicboom
+  #define LCD_SET_PROGRESS_MANUALLY     //SonicBoom
 
   // Show the E position (filament used) during printing
   //#define LCD_SHOW_E_TOTAL
 #endif
 
 #if EITHER(SDSUPPORT, LCD_SET_PROGRESS_MANUALLY) && ANY(HAS_MARLINUI_U8GLIB, HAS_MARLINUI_HD44780, IS_TFTGLCD_PANEL, EXTENSIBLE_UI)
-  #define SHOW_REMAINING_TIME       // Display estimated time to completion   //Sonicboom
+  #define SHOW_REMAINING_TIME       // Display estimated time to completion   //SonicBoom
   #if ENABLED(SHOW_REMAINING_TIME)
-    #define USE_M73_REMAINING_TIME  // Use remaining time from M73 command instead of estimation  //Sonicboom
-    #define ROTATE_PROGRESS_DISPLAY // Display (P)rogress, (E)lapsed, and (R)emaining time    //Sonicboom
+    #define USE_M73_REMAINING_TIME  // Use remaining time from M73 command instead of estimation  //SonicBoom
+    #define ROTATE_PROGRESS_DISPLAY // Display (P)rogress, (E)lapsed, and (R)emaining time    //SonicBoom
   #endif
 
   #if EITHER(HAS_MARLINUI_U8GLIB, EXTENSIBLE_UI)
@@ -1299,7 +1299,7 @@
   //#define NO_SD_AUTOSTART                 // Remove auto#.g file support completely to save some Flash, SRAM
   //#define MENU_ADDAUTOSTART               // Add a menu option to run auto#.g files
 
-  #define BROWSE_MEDIA_ON_INSERT            // Open the file browser when media is inserted   //Sonicboom
+  #define BROWSE_MEDIA_ON_INSERT            // Open the file browser when media is inserted
 
   //#define MEDIA_MENU_AT_TOP               // Force the media menu to be listed on the top of the main menu
 
@@ -1383,10 +1383,10 @@
   //#define UTF_FILENAME_SUPPORT
 
   // This allows hosts to request long names for files and folders with M33
-  #define LONG_FILENAME_HOST_SUPPORT      //SonicBoom
+  #define LONG_FILENAME_HOST_SUPPORT //SonicBoom
 
   // Enable this option to scroll long filenames in the SD card menu
-  #define SCROLL_LONG_FILENAMES       //SonicBoom
+  #define SCROLL_LONG_FILENAMES     //SonicBoom
 
   // Leave the heaters on after Stop Print (not recommended!)
   //#define SD_ABORT_NO_COOLDOWN
@@ -1408,7 +1408,7 @@
   /**
    * Auto-report SdCard status with M27 S<seconds>
    */
-  #define AUTO_REPORT_SD_STATUS     //SonicBoom
+  #define AUTO_REPORT_SD_STATUS   //SonicBoom
 
   /**
    * Support for USB thumb drives using an Arduino USB Host Shield or
@@ -2080,7 +2080,7 @@
 // @section motion
 
 // The number of linear moves that can be in the planner at once.
-// The value of BLOCK_BUFFER_SIZE must be a power of 2 (e.g. 8, 16, 32)
+// The value of BLOCK_BUFFER_SIZE must be a power of 2 (e.g., 8, 16, 32)
 #if BOTH(SDSUPPORT, DIRECT_STEPPING)
   #define BLOCK_BUFFER_SIZE  8
 #elif ENABLED(SDSUPPORT)
@@ -2140,7 +2140,7 @@
  * Currently handles M108, M112, M410, M876
  * NOTE: Not yet implemented for all platforms.
  */
-#define EMERGENCY_PARSER    //Sonicboom
+#define EMERGENCY_PARSER    //SonicBoom
 
 /**
  * Realtime Reporting (requires EMERGENCY_PARSER)
@@ -3425,7 +3425,7 @@
  */
 #define EXTENDED_CAPABILITIES_REPORT
 #if ENABLED(EXTENDED_CAPABILITIES_REPORT)
-//#define M115_GEOMETRY_REPORT
+  //#define M115_GEOMETRY_REPORT
 #endif
 
 /**
