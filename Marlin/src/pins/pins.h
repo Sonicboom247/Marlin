@@ -637,6 +637,8 @@
   #include "stm32f4/pins_VAKE403D.h"            // STM32F4
 #elif MB(FYSETC_S6)
   #include "stm32f4/pins_FYSETC_S6.h"           // STM32F4                                env:FYSETC_S6 env:FYSETC_S6_8000
+  #elif MB(ARTILLERY_RUBY)
+  #include "stm32f4/pins_ARTILLERY_RUBY.h"      // STM32F4                                env:ARTILLERY_RUBY
 #elif MB(FYSETC_S6_V2_0)
   #include "stm32f4/pins_FYSETC_S6_V2_0.h"      // STM32F4                                env:FYSETC_S6 env:FYSETC_S6_8000
 #elif MB(FYSETC_SPIDER)
